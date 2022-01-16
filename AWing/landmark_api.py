@@ -63,6 +63,7 @@ def decode_landmark_heatmaps(hm):
 
     preds.add_(-0.5)
     preds = preds.numpy()
+    confidence = np.squeeze(confidence, axis=2)
 
     return preds, confidence
 
